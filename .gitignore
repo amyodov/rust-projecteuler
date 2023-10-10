@@ -3,7 +3,9 @@
 debug/
 target/
 
-# Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
+# Remove Cargo.lock from gitignore if creating an executable
+# (it should be tracked for executables),
+# leave it for libraries (it should be ignored for them).
 # More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
 Cargo.lock
 
@@ -12,3 +14,8 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+/.idea/
+*.iml
+
+# Cargo.lock should be ignored for libraries, tracked for binaries
