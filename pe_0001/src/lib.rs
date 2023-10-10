@@ -12,7 +12,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn correct_result() {
+    fn test_calc() {
         assert_eq!(calc(), 233168);
     }
 }
