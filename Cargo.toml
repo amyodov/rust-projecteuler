@@ -4,6 +4,8 @@ members = [
     "projecteuler",
     "pe_0001",
     "pe_0005",
+    "pe_0008",
+    "pe_0011",
     "pe_0013",
     "pe_0023",
 ]
