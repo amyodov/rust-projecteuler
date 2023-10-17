@@ -1,4 +1,4 @@
-use num_bigint::BigUint;
+use num::bigint::BigUint;
 
 fn last_digits(n: BigUint, n_digits: u8) -> u64 {
     let pow_of_10 = BigUint::from(10u8).pow(n_digits as u32);

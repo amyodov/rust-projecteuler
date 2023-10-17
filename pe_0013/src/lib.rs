@@ -1,4 +1,4 @@
-use num_bigint::BigUint;
+use num::bigint::BigUint;
 use std::str::FromStr;
 
 const NUMBERS: [&str; 100] = [
