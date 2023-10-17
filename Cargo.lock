@@ -88,6 +88,7 @@ name = "pe_0023"
 version = "0.1.0"
 dependencies = [
  "itertools",
+ "pe_itertools",
 ]
 
 [[package]]
@@ -95,6 +96,8 @@ name = "pe_0040"
 version = "0.1.0"
 dependencies = [
  "itertools",
+ "pe_digits",
+ "pe_itertools",
 ]
 
 [[package]]
@@ -105,11 +108,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "pe_digits"
+version = "0.1.0"
+dependencies = [
+ "pe_itertools",
+]
+
+[[package]]
+name = "pe_itertools"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+]
+
+[[package]]
 name = "projecteuler"
 version = "0.1.0"
 dependencies = [
  "pe_0001",
- "pe_0005",
 ]
 
 [[package]]

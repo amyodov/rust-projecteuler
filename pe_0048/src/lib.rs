@@ -1,5 +1,4 @@
 use num_bigint::BigUint;
-use std::str::FromStr;
 
 fn last_digits(n: BigUint, n_digits: u8) -> u64 {
     let pow_of_10 = BigUint::from(10u8).pow(n_digits as u32);
@@ -19,6 +18,7 @@ pub fn calc() -> u64 {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::str::FromStr;
 
     #[test]
     fn test_last_digits() {

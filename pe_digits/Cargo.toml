@@ -1,11 +1,9 @@
 [package]
-name = "pe_0023"
+name = "pe_digits"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-itertools = { workspace = true }
-
 pe_itertools = { path = "../pe_itertools"}

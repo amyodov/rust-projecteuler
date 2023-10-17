@@ -1,18 +1,7 @@
 use std::convert::identity;
 
-fn digits_of_number(n: u64) -> impl Iterator<Item=u8> {
-    let mut n_op = n;
-    let est_digits = n.ilog10() + 1;
-    let mut result: Vec<u8> = Vec::with_capacity(est_digits as usize);
+use pe_digits::digits_of_number;
 
-    while n_op > 0 {
-        let digit = n_op % 10;
-        n_op = n_op / 10;
-        result.push(digit as u8);
-    }
-
-    result.into_iter().rev()
-}
 
 fn champernowne_digits() -> impl Iterator<Item=u8> {
     (1..).map(digits_of_number).flat_map(identity)
@@ -34,18 +23,7 @@ pub fn calc() -> u64 {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use itertools::Itertools;
-
-    fn iterator_as_list<T>(ii: impl Iterator<Item=T>) -> String
-        where T: std::fmt::Display + std::fmt::Debug {
-        ii.map(|x| x.to_string()).join(",")
-    }
-
-    #[test]
-    fn test_digits_of_number() {
-        assert_eq!(iterator_as_list(digits_of_number(239487239842234)),
-                   "2,3,9,4,8,7,2,3,9,8,4,2,2,3,4");
-    }
+    use pe_itertools::iterator_as_list;
 
     #[test]
     fn test_champernowne_digits() {

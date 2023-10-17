@@ -50,11 +50,7 @@ pub fn calc() -> u64 {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use itertools::Itertools;
-
-    fn iterator_as_list<T: ToString>(ii: impl Iterator<Item=u64>) -> String {
-        ii.map(|x| x.to_string()).join(",")
-    }
+    use pe_itertools::iterator_as_list;
 
     #[test]
     fn test_proper_divisors() {

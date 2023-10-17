@@ -7,3 +7,6 @@ edition = "2021"
 
 [dependencies]
 itertools = { workspace = true }
+
+pe_digits = { path = "../pe_digits"}
+pe_itertools = { path = "../pe_itertools"}
