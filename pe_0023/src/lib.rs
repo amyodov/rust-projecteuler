@@ -52,7 +52,7 @@ mod tests {
     use super::*;
     use itertools::Itertools;
 
-    fn iterator_as_list(ii: impl Iterator<Item=u64>) -> String {
+    fn iterator_as_list<T: ToString>(ii: impl Iterator<Item=u64>) -> String {
         ii.map(|x| x.to_string()).join(",")
     }
 

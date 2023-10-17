@@ -91,6 +91,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "pe_0040"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+]
+
+[[package]]
 name = "pe_0048"
 version = "0.1.0"
 dependencies = [
