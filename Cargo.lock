@@ -15,6 +15,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a26ae43d7bcc3b814de94796a5e736d4029efb0ee900c12e2d54c993ad1a1e07"
 
 [[package]]
+name = "fibext"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6f5dbe6f1504943139921b7831f215f47769f4d686fe070bd646ef123b5dc102"
+dependencies = [
+ "num-bigint",
+]
+
+[[package]]
 name = "itertools"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -87,15 +96,22 @@ dependencies = [
 name = "pe_0023"
 version = "0.1.0"
 dependencies = [
- "itertools",
  "pe_itertools",
+]
+
+[[package]]
+name = "pe_0025"
+version = "0.1.0"
+dependencies = [
+ "fibext",
+ "num-bigint",
+ "pe_digits",
 ]
 
 [[package]]
 name = "pe_0040"
 version = "0.1.0"
 dependencies = [
- "itertools",
  "pe_digits",
  "pe_itertools",
 ]

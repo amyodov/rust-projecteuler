@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-itertools = { workspace = true }
+pe_digits = { path = "../pe_digits" }
 
-pe_digits = { path = "../pe_digits"}
-pe_itertools = { path = "../pe_itertools"}
+[dev-dependencies]
+pe_itertools = { path = "../pe_itertools" }
