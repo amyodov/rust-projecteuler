@@ -21,19 +21,13 @@ fn champernowne_digits() -> impl Iterator<Item=u8> {
 pub fn calc() -> u64 {
     champernowne_digits()
         .enumerate()
-        .map(|(i, v)| (i + 1, v as u64))
+        .map(|(i, v)| (i + 1, v))
         .take_while(|(i, _)| *i <= 1_000_000)
-        .filter(|(i, _)| {
-            false ||
-                *i == 1 ||
-                *i == 10 ||
-                *i == 100 ||
-                *i == 1_000 ||
-                *i == 10_000 ||
-                *i == 100_000 ||
-                *i == 1_000_000
+        .filter(|(i, _)| match *i {
+            1 | 10 | 100 | 1_000 | 10_000 | 100_000 | 1_000_000 => true,
+            _ => false
         })
-        .map(|(_, v)| v)
+        .map(|(_, v)| v as u64)
         .product()
 }
 
