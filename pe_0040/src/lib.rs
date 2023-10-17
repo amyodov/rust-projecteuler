@@ -1,11 +1,17 @@
 use std::convert::identity;
 
 fn digits_of_number(n: u64) -> impl Iterator<Item=u8> {
-    n.to_string()
-        .chars()
-        .map(|c| c.to_digit(10).unwrap() as u8)
-        .collect::<Vec<_>>()
-        .into_iter()
+    let mut n_op = n;
+    let est_digits = n.ilog10() + 1;
+    let mut result: Vec<u8> = Vec::with_capacity(est_digits as usize);
+
+    while n_op > 0 {
+        let digit = n_op % 10;
+        n_op = n_op / 10;
+        result.push(digit as u8);
+    }
+
+    result.into_iter().rev()
 }
 
 fn champernowne_digits() -> impl Iterator<Item=u8> {
@@ -44,7 +50,7 @@ mod tests {
     #[test]
     fn test_digits_of_number() {
         assert_eq!(iterator_as_list(digits_of_number(239487239842234)),
-                   "2,3,9,4,8,7,2,3,9,8,4,2,2,3,4")
+                   "2,3,9,4,8,7,2,3,9,8,4,2,2,3,4");
     }
 
     #[test]
