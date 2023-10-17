@@ -8,6 +8,7 @@ members = [
     "pe_0011",
     "pe_0013",
     "pe_0023",
+    "pe_0048",
 ]
 
 [workspace.dependencies]
