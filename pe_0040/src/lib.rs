@@ -1,10 +1,10 @@
 use std::convert::identity;
 
-use pe_digits::digits_of_number;
+use pe_digits::digits;
 
 
 fn champernowne_digits() -> impl Iterator<Item=u8> {
-    (1..).map(digits_of_number).flat_map(identity)
+    (1..).map(digits).flat_map(identity)
 }
 
 pub fn calc() -> u64 {

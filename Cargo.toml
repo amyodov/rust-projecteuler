@@ -10,6 +10,7 @@ members = [
     "pe_0011",
     "pe_0013",
     "pe_0023",
+    "pe_0025",
     "pe_0040",
     "pe_0048",
 ]
@@ -21,6 +22,7 @@ strip = true
 lto = true
 
 [workspace.dependencies]
+fibext = { version = "0.2", features = ["large-numbers"] }
 itertools = "0.11"
 memoize = "0.4"
 num = { version = "0.4", features = ["rand"]  }

@@ -1,0 +1,13 @@
+[package]
+name = "pe_0025"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fibext = { workspace = true }
+num = { workspace = true }
+
+pe_digits = { path = "../pe_digits"}
+pe_itertools = { path = "../pe_itertools"}
